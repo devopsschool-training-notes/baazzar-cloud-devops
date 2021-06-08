@@ -302,12 +302,38 @@ Image - httpd
 
 
 
+65.2.74.248
+centos
+centos123
+
+============================================
+docker run
+==========================
+pull -> Create -> Start -> ATTACHED TO THE CONTAINER
+
+docker run -d
+====================================================
+pull -> Create -> Start -> DO NOT ATTACHED TO THE CONTAINER
+
+==================================================================
+
+How to use that container?
+=====================================
+How to get inside a conainer?
+------------------------
+exec way - 
+		using exec command u can RUN any exeutables inside a cont.
+
+  136  git
+  137  docker exec 7c565041d4a8 ps
+  138  docker exec 7c565041d4a8 ls
+  139  clear
+docker exec -it 7c565041d4a8 /bin/bash
 
 
+How to access conainer from outside?
 
-
-
-
+ 37  docker run -d -p 81:80 httpd
 
 
 
