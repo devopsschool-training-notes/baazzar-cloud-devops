@@ -1,0 +1,171 @@
+More in Google "thedevopsschool youtube kubernetes"
+
+What is Docker? What is Container?
+=========================================
+What is Kubernetes?
+====================
+- Cont ORch Platform
+
+Why Kubernetes?
+=======================
+Other tools
+- ECS - Docker Swaram - NOmad - EKS
+FROM AMAZON == Docker === Hashicorp
+===================================================================
+AWS		Kubernetes
+-----------------------------
+EC2 ===== 	POD
+ASG ===== 	Deployment
+LB  ==== 	Services - ingress
+STORAGE ==== 	STORAGE 
+DNS 
+
+
+STORAGE
+=======================
+AWS by AWS
+		STORAGE
+			BS	- EBS
+			OS	- S3
+			FS	- EFS
+
+Kubernetes by YOU
+		STORAGE
+			BS
+			OS
+			FS
+
+YOU
+	HOST in MY PRIVATE DS
+	HOST in AWS DS
+======================================================
+How to get DB for my Application?
+
+AWS
+	EC2 -> DB Server
+		IP - USER - PASS - PORT
+	RDS
+		IP - USER - PASS - PORT
+Kubernetes
+	RDS
+		IP - USER - PASS - PORT
+	EC2 -> DB Server
+		IP - USER - PASS - PORT
+
+	Docker Image(Mysql) -> Container --> POD
+						IP - USER - PASS - PORT
+			
+===============================================
+Kubernetes run on 
+		MULTIPLE SERVER(S) - 
+===============================================================
+
+Kubernetes Arch
+=====================================
+WorkStation
+	kubectl
+
+K8S Clustor === Master Server Node(S)  + Worker Server Node(S)
+
+Master Server Node (Control Plane)
+	API Server
+	ETCD
+	SCHEDULAR
+	COntroller mgr
+
+Worker Server Node (Node)
+	Kubelet
+	Kube Proxy
+	Docker
+
+EKS 		Vs Self Hosted Kuber Clustors?
+======================================
+3 Master 	
+
+HOSTED KUBERNETES SERVICE
+
+================================================
+How to setup k8s Clustor Manually in my VM?
+https://www.devopsschool.com/blog/setting-up-kubernetes-clusters-using-kubeadm-manual-way-in-rhel-7-centos7/
+https://www.devopsschool.com/blog/setting-up-kubernetes-clusters-using-kubeadm-manual-way-in-ubuntu-16-04-xenial/
+
+
+How to setup EKS Clustor Manually in my VM?
+https://www.devopsschool.com/blog/setting-and-configuring-amazon-eks-using-aws-management-console-and-aws-cli/
+https://docs.aws.amazon.com/eks/latest/userguide/getting-started.html
+
+Workstaion - 13.126.145.9
+
+
+===================================================================
+AWS 
+	EC2
+	EC2
+	EC2	ASG		ELB
+	EC2
+	EC2
+	EC2
+
+
+Kubernetes
+	POD
+	POD
+	POD	DEPLOY		Service
+	POD
+	POD
+	POD
+
+
+What is POD?
+-------------------------
+POD 
+	Contains
+		Container(S) -> Docker Image --> Registry
+	Has
+		IP 
+
+
+
+scmgalaxy/nginx-devopsschoolv1
+scmgalaxy/nginx-devopsschoolv2
+
+
+kubectl create deployment my-dep --image=scmgalaxy/nginx-devopsschoolv1 --replicas=6
+kubectl expose  deploy my-dep --port=80 --target-port=80 --type=NodePort
+
+kubectl scale --replicas=20 deployment/my-dep
+
+
+=======================================================
+Do you know?
+	Concept of IP tables and How it works?
+	Concept of ROUTE tables and How it works?
+	Concept of OSI Model?
+		7 Layers
+	Concept of Network Protocol
+	Concept of Network Algorithc
+	Concept of Network Policy AKA Driver
+=========================================================
+13.126.145.9
+centos
+centos123
+
+COMBI 1
+---------
+kubectl create deployment <<NAME>> --image=scmgalaxy/nginx-devopsschoolv1 --replicas=3
+kubectl expose deploy <<NAME>> --port=80 --target-port=80 --type=NodePort
+
+COMBI 2
+---------
+kubectl create deployment <<NAME>> --image=scmgalaxy/nginx-devopsschoolv2 --replicas=3
+kubectl expose deploy <<NAME>> --port=80 --target-port=80 --type=NodePort
+
+kubectl get svc
+kubectl get pods
+
+How to acess k8s LB?
+http://13.126.145.9:<<31071>>>
+
+
+
+
