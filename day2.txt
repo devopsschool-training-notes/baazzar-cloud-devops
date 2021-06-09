@@ -166,6 +166,86 @@ kubectl get pods
 How to acess k8s LB?
 http://13.126.145.9:<<31071>>>
 
+=====================================================
+
+
+On Demand - HOURLY
+------------------------
+Reserved- YEARLy
+SPOT - WEEKly
+Dedicated -----
+
+
+===========================================================================
+
+	        ===========================================================================
+Editor -> Code 		-> Review -> Build -> 	UnitT -> Package -> Archive 	-> Dep2QA -> AT -> Coverage 
+============================================================================================			
+Cloud9 -> CodeCommit   -> CodeStar--> CodeBuild  		-> CodeArtifact -> CodeDeploy
+										-> OpsWorks
+---------------------------------------------------------------------------------------------
+					CodePipeline
+											
+JIRA -> Git -> SonarQube -> MAven -> Junit -> war --> nexus -> Puppet -> sel --> jacoco
+================================================================================================
+					Jenkins
+						
+
+CodeCommit == github
+ 
+
+
+
+
+CloudShell
+X-Ray
+		AGENT			Server			1 PRO		Group ofProg				
+Puppet		Puppet Agent(TCP 5670)	Puppet Master		Puppet Pro	Module
+
+Ansible		NO AGENT(SSH - 20)		Ansible Control server	Playbook	Role
+
+=========================================================
+Puppet using Jenkins?
+=============================
+
+Puppet Pro
+	Resource
+		200-300
+Playbook
+	Module
+		5000
+===================================================================
+
+
+
+
+http://www.rajeshkumar.xyz/
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
